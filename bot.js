@@ -9,7 +9,7 @@ function getGovernmentBills() {
 }
 
 new CronJob(
-  '* * * * *', // everyday at 7 am
+  '0 7 * * *', // everyday at 7 am
   function () {
     // Call Twitter BOT to post new Tweet
     getGovernmentBills()
