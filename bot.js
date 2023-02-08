@@ -44,7 +44,9 @@ new CronJob(
             })
 
             tootThread(
-              `${new Date()}\nGood morning, there are ${
+              `${new Date().toLocaleDateString(
+                'en-GB'
+              )}\nGood morning, there are ${
                 tootTextHtml.length
               } bills on the agenda today. Please find information for them below. #cdnpoli                                                                            `,
               tootTextHtml,
