@@ -44,11 +44,11 @@ new CronJob(
             })
 
             tootThread(
-              `${new Date().toLocaleDateString(
-                'en-GB'
-              )}\nGood morning, there are ${
-                tootTextHtml.length
-              } bills on the agenda today. Please find information for them below. #cdnpoli                                                                            `,
+              `${new Date().toLocaleDateString('en-GB')}\nGood morning, there ${
+                tootTextHtml.length === 1
+                  ? `is one bill`
+                  : `are ${tootTextHtml.length} bills`
+              } on the agenda today. Please find information for them below. #cdnpoli                                                                            `,
               tootTextHtml,
               null
             )
