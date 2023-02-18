@@ -40,7 +40,7 @@ new CronJob(
               }
             })
             const tootTextHtml = formattedBills.map((bill) => {
-              return `Bill: ${bill.number}\nTitle: ${bill.title}\nStatus: ${bill.status}\nLink: ${bill.url}\nPortfolio: ${bill.minister}`
+              return `Bill: ${bill.number}\nTitle: ${bill.title}\nStatus: ${bill.status}\nPortfolio: ${bill.minister}\n${bill.url}`
             })
 
             tootThread(
@@ -48,7 +48,7 @@ new CronJob(
                 tootTextHtml.length === 1
                   ? `is one bill`
                   : `are ${tootTextHtml.length} bills`
-              } on the agenda today. Please find information for them below. #cdnpoli                                                                            `,
+              } on the agenda today. Please find details below. #cdnpoli                                                                            `,
               tootTextHtml,
               null
             )
